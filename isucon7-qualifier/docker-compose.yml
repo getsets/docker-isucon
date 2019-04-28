@@ -53,6 +53,8 @@ services:
       args:
         GIT_URL: https://github.com/getsets/isucon7-qualify.git
     image: isucon7-qualifier-db
+    volumes:
+      - ./docker/db/mysql-confd:/etc/mysql/conf.d
     ports:
       - "3306"
     networks:
